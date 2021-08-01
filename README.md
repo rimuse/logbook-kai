@@ -5,6 +5,10 @@
 [![GitHub All Releases](https://img.shields.io/github/downloads/rimuse/logbook-kai/total)](https://github.com/rimuse/logbook-kai/releases)
 [![GitHub Release Date](https://img.shields.io/github/release-date/rimuse/logbook-kai)](https://github.com/rimuse/logbook-kai/releases)
 
+## ****お知らせ****
+個人利用のため修正を行っておりますので、Issueは受け付けておりません。  
+海域、艦娘、任務の更新ができれば良いな程度。
+
 ## ****重要なお知らせ****
 航海日誌(logbook-kai)は[sanaehirotaka さん](https://github.com/sanaehirotaka/logbook-kai/)が開発されたものを引き継ぐ形で、2020年から[Sdk0815](https://github.com/Sdk0815/logbook-kai/)によってメンテナンスを継続してきましたが、諸般の事情により今後のメンテナンスを停止することといたしました。現状の最新版である `v21.7.1` が最終盤となります。公式Twitterアカウントも後日閉鎖する予定です。
 
