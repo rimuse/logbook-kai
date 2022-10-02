@@ -48,11 +48,14 @@ import logbook.bean.Ship;
 import logbook.bean.ShipCollection;
 import logbook.bean.ShipMst;
 import logbook.bean.SlotItemCollection;
+import logbook.bean.SlotitemMst;
+import logbook.bean.SlotitemMstCollection;
 import logbook.internal.Audios;
 import logbook.internal.BouyomiChanUtils;
 import logbook.internal.BouyomiChanUtils.Type;
 import logbook.internal.LoggerHolder;
 import logbook.internal.Ships;
+import logbook.internal.SlotItemType;
 import logbook.internal.Tuple;
 import logbook.internal.proxy.ProxyHolder;
 import logbook.plugin.PluginServices;
@@ -253,9 +256,13 @@ public class MainController extends WindowController {
      */
     private void button() {
         // 装備
-        Integer slotitem = SlotItemCollection.get()
+        Map<Integer, SlotitemMst> itemMstMap = SlotitemMstCollection.get().getSlotitemMap();
+        Long slotitem = SlotItemCollection.get()
                 .getSlotitemMap()
-                .size();
+                .values()
+                .stream()
+                .filter(item -> SlotItemType.toSlotItemType(itemMstMap.get(item.getSlotitemId())).isCount())
+                .count();
         Integer maxSlotitem = Basic.get()
                 .getMaxSlotitem();
         this.item.setText(MessageFormat.format(this.itemFormat, slotitem, maxSlotitem));
